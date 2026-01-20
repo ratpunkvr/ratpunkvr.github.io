@@ -1,44 +1,278 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <link rel="apple-touch-icon" sizes="180x180" href="/icons/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="/icons/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="/icons/favicon-16x16.png">
-    <link rel="manifest" href="/icons/site.webmanifest">
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
+  <head>
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+    <link rel="manifest" href="/site.webmanifest" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
     <meta property="og:title" content="ratpunk's links" />
     <meta property="og:type" content="website" />
     <meta property="og:URL" content="https://ratpunk.link" />
-    <meta property="og:image" content="https://ratpunk.link/icons/android-chrome-192x192.png" />
-    <meta property="og:description" content="hi i'm ratpunk!!! i like to dance and make music and videos. here are the places you can find me :]" />
+    <meta
+      property="og:image"
+      content="https://ratpunk.link/icons/android-chrome-192x192.png"
+    />
+    <meta
+      property="og:description"
+      content="hi i'm ratpunk!!! i like to dance and make music and videos. here are the places you can find me :]"
+    />
 
     <title>ratpunk's links</title>
-</head>
-<body>
-    hi i am ratpunk grr hehe<br>
-    i will make this pretty later but you can watch my <b>videos</b>:<br>
-    <section>
-        <ul>
-            <li><a href="https://www.tiktok.com/@ratpunkvr/">tiktok</a></li>
-            <li><a href="https://www.youtube.com/@ratpunkvr">youtube</a></li>
-            <li><a href="https://www.instagram.com/ratpunkvr/">instagram</a></li>
-        </ul>
-    </section>
-    i also <b>stream (occasionally)</b>:
-    <section>
-        <ul>
-            <li><a href="https://www.youtube.com/@ratpunkvr/live">youtube</a></li>
-            <li><a href="https://twitch.tv/ratpunkvr">twitch</a></li>
-            <li><a href="https://www.tiktok.com/@ratpunkvr/live">tiktok</a></li>
-            <li><a href="https://kick.com/ratpunkvr">kick</a></li>
-        </ul>
-    </section>
-    i also have a discord server!<br>
-    <a href="https://discord.gg/ek95KgP4WW">join my <b>discord</b></a><br>
-    and a vrchat group for events:<br>
-    <a href="https://vrc.group/PUNKIN.2425">join my <b>vrchat group</b></a><br>
-    i have a <a href="https://bsky.app/profile/ratpunk.link">bluesky</a> too. more to come
-</body>
+
+    <style>
+      /* 1. Use a more-intuitive box-sizing model */
+      *,
+      *::before,
+      *::after {
+        box-sizing: border-box;
+      }
+
+      /* 2. Remove default margin */
+      *:not(dialog) {
+        margin: 0;
+      }
+
+      /* 3. Enable keyword animations */
+      @media (prefers-reduced-motion: no-preference) {
+        html {
+          interpolate-size: allow-keywords;
+        }
+      }
+
+      body {
+        /* 4. Add accessible line-height */
+        line-height: 1.5;
+        /* 5. Improve text rendering */
+        -webkit-font-smoothing: antialiased;
+      }
+
+      /* 6. Improve media defaults */
+      img,
+      picture,
+      video,
+      canvas,
+      svg {
+        display: block;
+        max-width: 100%;
+      }
+
+      /* 7. Inherit fonts for form controls */
+      input,
+      button,
+      textarea,
+      select {
+        font: inherit;
+      }
+
+      /* 8. Avoid text overflows */
+      p,
+      h1,
+      h2,
+      h3,
+      h4,
+      h5,
+      h6 {
+        overflow-wrap: break-word;
+      }
+
+      /* 9. Improve line wrapping */
+      p {
+        text-wrap: pretty;
+      }
+      h1,
+      h2,
+      h3,
+      h4,
+      h5,
+      h6 {
+        text-wrap: balance;
+      }
+
+      /*
+  10. Create a root stacking context
+*/
+      #root,
+      #__next {
+        isolation: isolate;
+      }
+
+	  /**/
+	  .punkbox {
+		margin: auto;
+		position: relative;
+		display: grid;
+		height: 75vh;
+		width: 75vw;
+		max-width: 800px;
+		max-height: 800px;
+		border: solid;
+		box-shadow: 0px 0px 0px 6px rgba(255,255,255,0.1);  
+		border-width: 0px;
+		border-top-left-radius: 45px;
+		border-bottom-right-radius: 45px;
+
+		background-image: url("images/containerbg.webp");
+		background-size: cover;
+		background-position: center;
+	  }
+
+	  body {
+		overflow: hidden;
+		display: grid;
+		height: 100vh;
+		background-image: url("images/bg.webp");
+		background-size: cover;
+		background-repeat: no-repeat;
+		background-position: center;
+		color: #CDCDCD;
+		font-family: sans-serif;
+	  }
+
+	  hgroup{
+		text-align: center;
+	  }
+
+	  .tox {
+		position: absolute;
+		left: -15vh;
+		bottom: -20%;
+		max-height: 60vh;
+		width: auto;
+	  }
+
+	  .snail {
+		position: absolute;
+		top: -24.5%;
+		right: 26vw;
+		width: 35vh;
+	  }
+
+	  .sune {
+		position: absolute;
+		right: -19vh;
+		bottom: -14%;
+		max-height: 94vh;
+		width: auto;
+	  }
+
+	  .punkbox--content{
+		padding: 20px;
+		overflow: auto;
+		justify-self: center;
+		max-width: 75vw;
+	  }
+
+	  .size-hide {
+		display: unset;
+	  }
+
+	  @media (max-width: 629px) {
+		.tox {
+			max-height: 40vh;
+			left: -13vh;
+    		bottom: -14%;
+		}
+
+		.sune{
+			right: -19vh;
+			bottom: -13%;
+			max-height: 78vh;
+		}
+
+		.snail{
+			top: -19.5%;
+			right: unset;
+			left: 5vw;
+			width: 28vh;
+		}
+	  	.punkbox--content{
+			margin-block: 5px;
+			margin-inline: 5vw;
+	  	}
+	  }
+
+	  @media (max-width: 439px) {
+		.size-hide {
+		display: none;
+	  }
+		.tox {
+			max-height: 30vh;
+    left: -10vh;
+    bottom: -10%;
+		}
+
+		.sune{
+			right: -11vh;
+    bottom: -8%;
+    max-height: 52vh;
+		}
+
+		.snail{
+			top: -17.5%;
+    right: unset;
+    left: 5vw;
+    width: 25vh;
+		}
+	  	.punkbox--content{
+			margin-block: 5px;
+			margin-inline: 5vw;
+	  	}
+	  }
+
+	  ul {
+		display:flex;
+		align-items: center;
+		gap: 5vw;
+	  }
+    </style>
+  </head>
+  <body>
+    <main class="punkbox">
+		<div class="punkbox--content">
+			<hgroup>
+				<h1>hi, i'm ratpunk :]</h1>
+				<p>
+					<span class="size-hide">i like to dance and express myself by making things!<br></span>
+					i hope to share some joy with you 😊
+				</p>
+				<ul>
+					<li><a href="https://ko-fi.com/ratpunkvr"><b>kofi</b></a></li>
+					<li><a href="https://www.patreon.com/cw/ratpunk"><b>patreon</b></a></li>
+				</ul>
+			</hgroup>
+			<section>
+				<h2>where i post:</h2>
+				<ul>
+					<li><a href="https://www.tiktok.com/@ratpunkvr/">tiktok</a></li>
+					<li><a href="https://www.youtube.com/@ratpunkvr">youtube</a></li>
+					<li><a href="https://www.instagram.com/ratpunkvr/">instagram</a></li>
+					<!-- <li><a href="https://bsky.app/profile/ratpunk.link">bluesky</a></li> -->
+				</ul>
+			</section>
+			<section>
+				<h2>where i stream:</h2>
+				<ul>
+					<li><a href="https://www.twitch.tv/ratpunkvr">twitch</a></li>
+					<li><a href="https://www.tiktok.com/@ratpunkvr/">tiktok</a></li>
+					<li><a href="https://www.youtube.com/@ratpunkvr">youtube</a></li>
+					<li><a href="https://kick.com/ratpunkvr">kick (lol)</a></li>
+				</ul>
+			</section>
+			<section>
+				<h2>community:</h2>
+				<ul>
+					<li><a href="https://discord.gg/ek95KgP4WW"><b>discord</b></a></li>
+    				<li><a href="https://vrc.group/PUNKIN.2425"><b>vrchat group</b></a></li>
+				</ul>
+			</section>
+		</div>
+		<img class="snail" src="images/snail.webp"/>
+		<img class="sune" src="images/sune.webp">
+		<img class="tox" src="images/tox.webp" />
+	</main>
+    
+  </body>
 </html>
