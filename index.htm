@@ -105,6 +105,7 @@
 		position: relative;
 		display: grid;
 		align-items: center;
+		justify-content: center;
 		height: 75vh;
 		width: 75vw;
 		max-width: 800px;
@@ -131,7 +132,11 @@
 		color: #CDCDCD;
 		font-family: sans-serif;
 	  }
-
+ul, ol {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
 	  hgroup{
 		text-align: center;
 	  }
@@ -158,12 +163,16 @@
 		max-height: 94vh;
 		width: auto;
 	  }
-
+	  h1{
+		font-size: clamp(1.5rem, 4vmax, 3rem);
+		margin-block:1rem;
+	  }
 	  .punkbox--content{
-		padding: 20px;
+		padding-inline: 2rem;
 		overflow: auto;
 		justify-self: center;
-		max-width: 75vw;
+		max-width: 65vw;
+		max-height: 73vh;
 	  }
 
 	  .size-hide {
@@ -220,18 +229,89 @@
 	  	.punkbox--content{
 			margin-block: 5px;
 			margin-inline: 5vw;
+			overflow-x:hidden;
 	  	}
 	  }
 
 	  ul {
-		display:flex;
+		display: grid;
+  grid-template-columns: repeat(2, 1fr);
 		align-items: center;
-		gap: 5vw;
+		column-gap: 1rem;
+		row-gap: .5rem;
+		min-width: 0;
+		min-height: 0;
+		flex-direction: column;
+		margin-top: 1rem;
 	  }
+	  @media (max-width: 521px) {
+		ul{
+  grid-template-columns: repeat(1, 1fr);
 
+		}
+	  }
 	  img {
 		pointer-events: none;
 	  }
+
+	  i {
+		display: inline-block;
+		margin-right: 5px;
+		height:1.75em;
+		width:1.75em;
+		background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+  vertical-align: -0.4rem;
+  transform: translateX(-.1rem);
+	  }
+
+	  li{
+		white-space: nowrap;
+	  }
+	  b {
+		display: inline-block;
+		height:100%;
+		transform: translateY(-.17rem);
+	  }
+  
+	  [bs] { background-image: url("icons/social/bsky.webp"); }
+	  [tt] { background-image: url("icons/social/tiktok.webp");}
+	  [kf] { background-image: url("icons/social/kofi.webp");}
+	  [pt] { background-image: url("icons/social/patreon.webp");}
+	  [yt] { background-image: url("icons/social/youtube.webp");}
+	  [in] { background-image: url("icons/social/instagram.webp");}
+	  [tw] { background-image: url("icons/social/twitch.webp");}
+	  [dc] { background-image: url("icons/social/discord.webp");}
+	  [vr] { background-image: url("icons/social/vrchat.webp");}
+
+	  a { display:inline-block; width: 100%; height:100%;}
+	  a:visited{color:#CDCDCD;}
+	  a:link{color:#CDCDCD;}
+	  li:has(i) { 
+		border-radius: 25px; 
+		border-top-right-radius: 0px;;
+		background-position-y: .25rem;
+	  }
+	  li:has([bs]) { background-color: #043C70; }
+	  li:has([bs]):hover { background-color: #0887FE; }
+	  li:has([tt]) { background-color: #010101;}
+	  li:has([tt]):hover { background-color: #353535;}
+	  li:has([kf]) { background-color: #104256;}
+	  li:has([kf]):hover { background-color: #29ABE1;}
+	  li:has([pt]) { background-color: #8C3424;}
+	  li:has([pt]):hover { background-color: #DC5338;}
+	  li:has([yt]) { background-color: #500000;}
+	  li:has([yt]):hover { background-color: #F20000;}
+	  li:has([in]) { background-color: #750B5A;}
+	  li:has([in]):hover { background-color: #CC149B;}
+	  li:has([tw]) { background-color: #3E2968;}
+	  li:has([tw]):hover { background-color: #6B47B3;}
+	  li:has([dc]) { background-color: #3F4882;}
+	  li:has([dc]):hover { background-color: #5D6AC0;}
+	  li:has([vr]) { background-color: #032E54;}
+	  li:has([vr]):hover { background-color: #054986;}
+	  html{overflow:hidden;}
     </style>
   </head>
   <body>
@@ -243,41 +323,22 @@
 					<span class="size-hide">i like to dance and express myself by making things!<br></span>
 					i hope to share some joy with you 😊
 				</p>
-				<ul>
-					<li><a href="https://ko-fi.com/ratpunkvr"><b>kofi</b></a></li>
-					<li><a href="https://www.patreon.com/cw/ratpunk"><b>patreon</b></a></li>
-				</ul>
 			</hgroup>
-			<section>
-				<h2>where i post:</h2>
-				<ul>
-					<li><a href="https://www.tiktok.com/@ratpunkvr/">tiktok</a></li>
-					<li><a href="https://www.youtube.com/@ratpunkvr">youtube</a></li>
-					<li><a href="https://www.instagram.com/ratpunkvr/">instagram</a></li>
-					<!-- <li><a href="https://bsky.app/profile/ratpunk.link">bluesky</a></li> -->
+			<ul>
+					<li><a href="https://ko-fi.com/ratpunkvr"><i kf aria-hidden="true"></i><b>kofi</b></a></li>
+					<li><a href="https://www.patreon.com/ratpunk"><i pt aria-hidden="true"></i><b>patreon</b></a></li>
+					<li><a href="https://www.youtube.com/@ratpunkvr"><i yt aria-hidden="true"></i><b>youtube</b></a></li>
+					<li><a href="https://www.tiktok.com/@ratpunkvr/"><i tt aria-hidden="true"></i><b>tiktok</b></a></li>
+					<li><a href="https://www.twitch.tv/ratpunkvr"><i tw aria-hidden="true"></i><b>twitch</b></a></li>
+					<li><a href="https://www.instagram.com/ratpunkvr/"><i in aria-hidden="true"></i><b>instagram</b></a></li>
+					<li><a href="https://bsky.app/profile/ratpunk.link"><i bs aria-hidden="true"></i><b>bluesky</b></a></li>
+					<li><a href="https://discord.gg/ek95KgP4WW"><i dc aria-hidden="true"></i><b>discord</b></a></li>
+    				<li><a href="https://vrc.group/LUCID.2425"><i vr aria-hidden="true"></i><b>vrchat group</b></a></li>
 				</ul>
-			</section>
-			<section>
-				<h2>where i stream:</h2>
-				<ul>
-					<li><a href="https://www.twitch.tv/ratpunkvr">twitch</a></li>
-					<li><a href="https://www.tiktok.com/@ratpunkvr/">tiktok</a></li>
-					<li><a href="https://www.youtube.com/@ratpunkvr">youtube</a></li>
-					<li><a href="https://kick.com/ratpunkvr">kick (lol)</a></li>
-				</ul>
-			</section>
-			<section>
-				<h2>community:</h2>
-				<ul>
-					<li><a href="https://discord.gg/ek95KgP4WW"><b>discord</b></a></li>
-    				<li><a href="https://vrc.group/PUNKIN.2425"><b>vrchat group</b></a></li>
-				</ul>
-			</section>
 		</div>
-		<img class="snail" src="images/snail.webp"/>
-		<img class="sune" src="images/sune.webp">
-		<img class="tox" src="images/tox.webp" />
+		<img class="snail" src="images/snail.webp" alt="ojosama, it's time to go to bed"/>
+		<img class="sune" src="images/sune.webp" alt="creature">
+		<img class="tox" src="images/tox.webp" alt="the pokemon part of the brain"/>
 	</main>
-    
   </body>
 </html>
