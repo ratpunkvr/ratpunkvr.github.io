@@ -23,6 +23,11 @@
     <title>how to support ratpunk</title>
 
     <style>
+		hgroup {
+			mix-blend-mode: difference;
+			z-index: 1111;
+			position: relative;
+		}
       /* 1. Use a more-intuitive box-sizing model */
       *,
       *::before,
@@ -316,14 +321,17 @@ ul, ol {
   </head>
   <body>
     <main class="punkbox">
-		<div class="punkbox--content">
+		<div class="punkbox--content" style="padding-inline:5vw;">
+			<img class="snail" src="images/snail.webp" alt="ojosama, it's time to go to bed" aria-hidden="true"/>
+			<img class="sune" src="images/sune.webp" alt="creature" aria-hidden="true"/>
+			<img class="tox" src="images/tox.webp" alt="the pokemon part of the brain" aria-hidden="true"/>
 			<hgroup>
 				<h1>hi, i'm ratpunk :]</h1>
 				<p>
           thank you so much for wanting to support me! this fundraiser at this URL has long since ended.
           <br> however, i am still sustained by the generosity of others at the links below! 
           <br> if any of what i do has made you smile, i hope that you can at least continue watching 😊
-					<span class="size-hide"></span>
+					<!-- <span class="size-hide" ></span> -->
 				</p>
 			</hgroup>
 			<ul>
@@ -333,9 +341,6 @@ ul, ol {
     				<li><a href="https://vrc.group/LUCID.2425"><i vr aria-hidden="true"></i><b>vrchat group</b></a></li>
 				</ul>
 		</div>
-		<img class="snail" src="images/snail.webp" alt="ojosama, it's time to go to bed"/>
-		<img class="sune" src="images/sune.webp" alt="creature">
-		<img class="tox" src="images/tox.webp" alt="the pokemon part of the brain"/>
 	</main>
   </body>
 </html>
